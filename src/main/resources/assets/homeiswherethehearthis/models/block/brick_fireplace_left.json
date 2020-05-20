@@ -1,0 +1,7 @@
+{
+    "parent": "homeiswherethehearthis:block/fireplace_base_left",
+    "textures": {
+    	"particle": "block/bricks",
+        "base": "block/bricks"
+    }
+}

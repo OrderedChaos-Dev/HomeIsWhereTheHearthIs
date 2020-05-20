@@ -8,15 +8,12 @@ import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
@@ -26,12 +23,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.registries.ForgeRegistries;
 
-@EventBusSubscriber(modid = HomeIsWhereTheHearthIs.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class ChimneyBlock extends Block {
 	
 	private static final VoxelShape NORTH = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 2.0D);
@@ -96,6 +88,7 @@ public class ChimneyBlock extends Block {
 				|| (state.getBlock() == Blocks.SMOKER && state.get(AbstractFurnaceBlock.LIT).booleanValue())
 				|| state.getBlock() == Blocks.FIRE
 				|| state.getBlock() == Blocks.CAMPFIRE
+				|| (state.getBlock() instanceof FireplaceBlock && state.get(FireplaceBlock.LIT).booleanValue())
 				|| state.getBlock() == Blocks.MAGMA_BLOCK;
 	}
 	
@@ -126,43 +119,4 @@ public class ChimneyBlock extends Block {
 	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
 		builder.add(EVERSMOKE);
 	}
-
-	@SubscribeEvent
-	public static void registerBlocks(RegistryEvent.Register<Block> event) {
-		brick_chimney = createChimney(new ChimneyBlock(Blocks.BRICKS), "brick_chimney");
-		cobblestone_chimney = createChimney(new ChimneyBlock(Blocks.COBBLESTONE), "cobblestone_chimney");
-		mossy_cobblestone_chimney = createChimney(new ChimneyBlock(Blocks.MOSSY_COBBLESTONE), "mossy_cobblestone_chimney");
-		stone_chimney = createChimney(new ChimneyBlock(Blocks.STONE), "stone_chimney");
-		smooth_stone_chimney = createChimney(new ChimneyBlock(Blocks.SMOOTH_STONE), "smooth_stone_chimney");
-		stone_brick_chimney = createChimney(new ChimneyBlock(Blocks.STONE_BRICKS), "stone_brick_chimney");
-		cracked_stone_brick_chimney = createChimney(new ChimneyBlock(Blocks.CRACKED_STONE_BRICKS), "cracked_stone_brick_chimney");
-		mossy_stone_brick_chimney = createChimney(new ChimneyBlock(Blocks.MOSSY_STONE_BRICKS), "mossy_stone_brick_chimney");
-		granite_chimney = createChimney(new ChimneyBlock(Blocks.GRANITE), "granite_chimney");
-		andesite_chimney = createChimney(new ChimneyBlock(Blocks.ANDESITE), "andesite_chimney");
-		diorite_chimney = createChimney(new ChimneyBlock(Blocks.DIORITE), "diorite_chimney");
-		polished_granite_chimney = createChimney(new ChimneyBlock(Blocks.POLISHED_GRANITE), "polished_granite_chimney");
-		polished_andesite_chimney = createChimney(new ChimneyBlock(Blocks.POLISHED_ANDESITE), "polished_andesite_chimney");
-		polished_diorite_chimney = createChimney(new ChimneyBlock(Blocks.POLISHED_DIORITE), "polished_diorite_chimney");
-		nether_brick_chimney = createChimney(new ChimneyBlock(Blocks.NETHER_BRICKS), "nether_brick_chimney");
-		red_nether_brick_chimney = createChimney(new ChimneyBlock(Blocks.RED_NETHER_BRICKS), "red_nether_brick_chimney");
-		smooth_sandstone_chimney = createChimney(new ChimneyBlock(Blocks.SMOOTH_SANDSTONE), "smooth_sandstone_chimney");
-		smooth_red_sandstone_chimney = createChimney(new ChimneyBlock(Blocks.SMOOTH_RED_SANDSTONE), "smooth_red_sandstone_chimney");
-	}
-	
-	public static Block createChimney(Block chimney, String name) {
-		chimney.setRegistryName(new ResourceLocation(HomeIsWhereTheHearthIs.MOD_ID, name));
-		ForgeRegistries.BLOCKS.register(chimney);
-		
-		BlockItem chimney_item = new BlockItem(chimney, new Item.Properties().group(HomeIsWhereTheHearthIs.HEARTH_ITEMGROUP));
-		chimney_item.setRegistryName(new ResourceLocation(HomeIsWhereTheHearthIs.MOD_ID, name));
-		ForgeRegistries.ITEMS.register(chimney_item);
-		
-		return chimney;
-	}
-	
-	public static Block brick_chimney, cobblestone_chimney, mossy_cobblestone_chimney, stone_chimney, smooth_stone_chimney,
-						stone_brick_chimney, cracked_stone_brick_chimney, mossy_stone_brick_chimney, granite_chimney,
-						andesite_chimney, diorite_chimney, polished_granite_chimney, polished_andesite_chimney,
-						polished_diorite_chimney, nether_brick_chimney, red_nether_brick_chimney, smooth_sandstone_chimney,
-						smooth_red_sandstone_chimney;
 }

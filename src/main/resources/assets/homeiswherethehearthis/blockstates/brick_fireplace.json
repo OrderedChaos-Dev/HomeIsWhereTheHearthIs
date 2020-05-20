@@ -1,0 +1,28 @@
+{
+	"variants": {
+		"facing=south,type=single,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit"},
+		"facing=south,type=left,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit_left"},
+		"facing=south,type=right,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit_right"},
+		"facing=north,type=single,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit", "y": 180},
+		"facing=north,type=left,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit_left", "y": 180},
+		"facing=north,type=right,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit_right", "y": 180},
+		"facing=east,type=single,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit", "y": 270},
+		"facing=east,type=left,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit_left", "y": 270},
+		"facing=east,type=right,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit_right", "y": 270},
+		"facing=west,type=single,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit", "y": 90},
+		"facing=west,type=left,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit_left", "y": 90},
+		"facing=west,type=right,lit=true": { "model": "homeiswherethehearthis:block/brick_fireplace_lit_right", "y": 90},
+		"facing=south,type=single,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace"},
+		"facing=south,type=left,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace_left"},
+		"facing=south,type=right,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace_right"},
+		"facing=north,type=single,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace", "y": 180},
+		"facing=north,type=left,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace_left", "y": 180},
+		"facing=north,type=right,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace_right", "y": 180},
+		"facing=east,type=single,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace", "y": 270},
+		"facing=east,type=left,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace_left", "y": 270},
+		"facing=east,type=right,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace_right", "y": 270},
+		"facing=west,type=single,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace", "y": 90},
+		"facing=west,type=left,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace_left", "y": 90},
+		"facing=west,type=right,lit=false": { "model": "homeiswherethehearthis:block/brick_fireplace_right", "y": 90}
+	}
+}
