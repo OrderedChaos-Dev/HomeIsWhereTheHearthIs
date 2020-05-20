@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "smokingchimneys:brick_chimney"
+          "name": "homeiswherethehearthis:brick_chimney"
         }
       ],
       "conditions": [

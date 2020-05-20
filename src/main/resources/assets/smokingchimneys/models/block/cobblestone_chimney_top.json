@@ -1,5 +1,5 @@
 {
-    "parent": "smokingchimneys:block/chimney_top_base",
+    "parent": "homeiswherethehearthis:block/chimney_top_base",
     "textures": {
     	"particle": "block/cobblestone",
         "0": "block/cobblestone"

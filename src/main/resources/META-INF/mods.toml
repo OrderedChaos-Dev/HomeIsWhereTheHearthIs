@@ -1,25 +1,25 @@
 modLoader="javafml"
 loaderVersion="[30,)"
-issueTrackerURL="https://github.com/OrderedChaos-Dev/SmokingChimneys/issues"
+issueTrackerURL="https://github.com/OrderedChaos-Dev/HomeIsWhereTheHearthIs/issues"
 
 [[mods]]
-	modId="smokingchimneys"
+	modId="homeiswherethehearthis"
 	version="${version}"
-	displayName="Smoking Chimneys"
+	displayName="Home Is Where The Hearth Is"
 	displayURL="https://www.orderedchaos.dev/"
-	logoFile="smokingchimneys.png"
+	logoFile="https://github.com/OrderedChaos-Dev/HomeIsWhereTheHearthIs/issues.png"
 	authors="ordered_chaos_dev"
 	description='''
-	Simple chimneys for your home
+		Simple chimneys and fireplaces for your home
 	'''
-[[dependencies.smokingchimneys]]
+[[dependencies.homeiswherethehearthis]]
     modId="forge"
     mandatory=true
     versionRange="[30,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.smokingchimneys]]
+[[dependencies.homeiswherethehearthis]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.15.2]"

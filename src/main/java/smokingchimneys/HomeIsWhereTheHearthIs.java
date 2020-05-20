@@ -6,12 +6,12 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod(SmokingChimneys.MOD_ID)
-public class SmokingChimneys {
-	public static final String MOD_ID = "smokingchimneys";
-	public static final ChimneysItemGroup CHIMNEYS_ITEMGROUP = new ChimneysItemGroup("smokingchimneys");
+@Mod(HomeIsWhereTheHearthIs.MOD_ID)
+public class HomeIsWhereTheHearthIs {
+	public static final String MOD_ID = "homeiswherethehearthis";
+	public static final HearthItemGroup HEARTH_ITEMGROUP = new HearthItemGroup("homeiswherethehearthis");
 	
-	public SmokingChimneys() {
+	public HomeIsWhereTheHearthIs() {
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
 	}
 	
@@ -20,9 +20,9 @@ public class SmokingChimneys {
 	}
 }
 
-class ChimneysItemGroup extends ItemGroup {
+class HearthItemGroup extends ItemGroup {
 
-	public ChimneysItemGroup(String label) {
+	public HearthItemGroup(String label) {
 		super(label);
 	}
 

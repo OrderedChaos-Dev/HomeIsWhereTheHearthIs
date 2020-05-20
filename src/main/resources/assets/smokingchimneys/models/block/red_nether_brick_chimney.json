@@ -1,5 +1,5 @@
 {
-    "parent": "smokingchimneys:block/chimney_base",
+    "parent": "homeiswherethehearthis:block/chimney_base",
     "textures": {
     	"particle": "block/red_nether_bricks",
         "0": "block/red_nether_bricks"

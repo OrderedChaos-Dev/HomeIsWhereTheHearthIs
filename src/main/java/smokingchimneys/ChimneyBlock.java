@@ -31,7 +31,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.registries.ForgeRegistries;
 
-@EventBusSubscriber(modid = SmokingChimneys.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = HomeIsWhereTheHearthIs.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class ChimneyBlock extends Block {
 	
 	private static final VoxelShape NORTH = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 2.0D);
@@ -150,11 +150,11 @@ public class ChimneyBlock extends Block {
 	}
 	
 	public static Block createChimney(Block chimney, String name) {
-		chimney.setRegistryName(new ResourceLocation(SmokingChimneys.MOD_ID, name));
+		chimney.setRegistryName(new ResourceLocation(HomeIsWhereTheHearthIs.MOD_ID, name));
 		ForgeRegistries.BLOCKS.register(chimney);
 		
-		BlockItem chimney_item = new BlockItem(chimney, new Item.Properties().group(SmokingChimneys.CHIMNEYS_ITEMGROUP));
-		chimney_item.setRegistryName(new ResourceLocation(SmokingChimneys.MOD_ID, name));
+		BlockItem chimney_item = new BlockItem(chimney, new Item.Properties().group(HomeIsWhereTheHearthIs.HEARTH_ITEMGROUP));
+		chimney_item.setRegistryName(new ResourceLocation(HomeIsWhereTheHearthIs.MOD_ID, name));
 		ForgeRegistries.ITEMS.register(chimney_item);
 		
 		return chimney;
