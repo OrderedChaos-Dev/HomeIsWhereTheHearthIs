@@ -1,0 +1,7 @@
+{
+    "parent": "smokingchimneys:block/chimney_top_base",
+    "textures": {
+    	"particle": "block/andesite",
+        "0": "block/andesite"
+    }
+}

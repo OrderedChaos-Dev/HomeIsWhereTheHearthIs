@@ -1,0 +1,7 @@
+{
+    "parent": "smokingchimneys:block/chimney_base",
+    "textures": {
+    	"particle": "block/stone",
+        "0": "block/stone"
+    }
+}

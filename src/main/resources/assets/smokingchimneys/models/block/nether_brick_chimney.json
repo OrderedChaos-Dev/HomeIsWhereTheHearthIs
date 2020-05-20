@@ -1,0 +1,7 @@
+{
+    "parent": "smokingchimneys:block/chimney_base",
+    "textures": {
+    	"particle": "block/nether_bricks",
+        "0": "block/nether_bricks"
+    }
+}

@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[30,)"
+issueTrackerURL="https://github.com/OrderedChaos-Dev/SmokingChimneys/issues"
+
+[[mods]]
+	modId="smokingchimneys"
+	version="${version}"
+	displayName="Smoking Chimneys"
+	displayURL="https://www.orderedchaos.dev/"
+	logoFile="smokingchimneys.png"
+	authors="ordered_chaos_dev"
+	description='''
+	Simple chimneys for your home
+	'''
+[[dependencies.smokingchimneys]]
+    modId="forge"
+    mandatory=true
+    versionRange="[30,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.smokingchimneys]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"

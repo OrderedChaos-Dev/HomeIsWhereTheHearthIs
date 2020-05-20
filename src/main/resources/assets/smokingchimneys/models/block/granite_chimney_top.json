@@ -1,0 +1,7 @@
+{
+    "parent": "smokingchimneys:block/chimney_top_base",
+    "textures": {
+    	"particle": "block/granite",
+        "0": "block/granite"
+    }
+}
